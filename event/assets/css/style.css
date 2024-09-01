@@ -43,6 +43,26 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --jet: hsl(0, 0%, 21%);
+  --prussian-blue: hsla(217, 33%, 17%, 1);
+  --oxford-blue-2: hsla(222, 47%, 11%, 1);
+  --oxford-blue: hsla(221, 33%, 15%, 1);
+  --blue-violet: hsla(262, 83%, 58%, 1);
+  --blue-violet_a5: hsla(262, 83%, 58%, 0.05);
+  --blue-violet_a10: hsla(262, 83%, 58%, 0.1);
+  --alice-blue: hsla(214, 32%, 91%, 1);
+  --alice-blue-2: hsla(215, 30%, 92%, 1);
+  --cultured: hsla(220, 14%, 96%, 1);
+  --gainsboro: hsla(220, 13%, 91%, 1);
+  --light-gray: hsla(216, 12%, 84%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white_a10: hsla(0, 0%, 100%, 0.1);
+  --manatee: hsla(218, 11%, 65%, 1);
+  --green-cyan: hsla(161, 94%, 30%, 1);
+  --cadet-grey: hsla(215, 20%, 65%, 1);
+  --electric-indigo: hsla(263, 70%, 50%, 1);
+  --maximum-red: hsla(0, 72%, 51%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --gunmetal: hsla(215, 28%, 17%, 1);
 
   /**
    * typography
@@ -61,6 +81,16 @@
   --fw-600: 600;
   --fw-700: 700;
   --fw-800: 800;
+
+  /**
+   * border radius
+   */
+
+   --radius-circle: 50%;
+   --radius-pill: 100px;
+   --radius-12: 12px;
+   --radius-8: 8px;
+   --radius-6: 6px;
 
   /**
    * spacing
@@ -139,6 +169,7 @@ button { cursor: pointer; }
 ion-icon { pointer-events: none; }
 
 address { font-style: normal; }
+
 
 html {
   font-family: var(--ff-urbanist);
@@ -458,6 +489,123 @@ body {
 }
 
 
+/*-----------------------------------*\
+  #HEROo
+\*-----------------------------------*/
+
+.heroo {
+  position: relative;
+  --section-padding: 180px 64px;
+  text-align: center;
+}
+
+.hero-title .span {
+  display: inline;
+  background-image: var(--linear-gradient-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroo .section-text {
+  color: var(--ultramarine-blue);
+  font-size: var(--fs-3);
+  opacity: 0.7;
+  margin-block: 16px 32px;
+}
+
+.heroo .btn { margin-inline: auto; }
+
+
+
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.contact .section-title { margin-block-end: 16px; }
+
+.contact .btn {
+  margin-inline: auto;
+  margin-block-start: 24px;
+}
+
+
+/*-----------------------------------*\
+  #NEWSLETTER
+\*-----------------------------------*/
+
+.newslettero {
+  position: relative;
+  margin-block-end: -200px;
+}
+
+.newsletter-cardd {
+  position: relative;
+  background-color: var(--oxford-blue-2);
+  padding: 40px 24px;
+  border-radius: var(--radius-12);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.newsletter-cardd .card-text { margin-block: 8px 32px; }
+
+.newslettero .input-fieldd {
+  background-color: var(--oxford-blue-2);
+  font-size: var(--body-md);
+  color: var(--white);
+  padding: 12px 24px;
+  box-shadow: var(--shadow-1);
+  border-radius: var(--radius-pill);
+  outline: none;
+  margin-block-end: 16px;
+}
+
+.newslettero .input-fieldd::placeholder { color: var(--manatee); }
+
+.newslettero .input-fieldd:focus { box-shadow: var(--shadow-4); }
+
+.newslettero .btn { margin-inline: auto; }
+
+.newslettero .bg-icon {
+  position: absolute;
+  font-size: 7.2rem;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.newslettero .bg-icon-1 {
+  top: -24px;
+  left: -24px;
+  transform: rotate(-45deg);
+}
+
+.newslettero .bg-icon-2 {
+  bottom: -16px;
+  right: -16px;
+}
+
+
+
+
+.sectionn { padding-block: var(--section-padding); }
+
+.btnn {
+  background-color: var(--blue-violet);
+  color: var(--white);
+  max-width: max-content;
+  font-size: var(--body-md);
+  font-weight: var(--fw-600);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition-1);
+}
+
+.btnn:is(:hover, :focus-visible) { background-color: var(--electric-indigo); }
 
 
 
@@ -768,9 +916,22 @@ body {
   gap: 8px;
 }
 
+.card-addresss {
+  font-size: var(--fs-5);
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 20px;
+}
+
 .event-card .card-address ion-icon {
   color: var(--ultramarine-blue);
   --ionicon-stroke-width: 40px;
+}
+
+.card-addresss ion-icon {
+  color: var(--ultramarine-blue);
+  --ionicon-stroke-width: 70px;
 }
 
 .event-card .h3 {
